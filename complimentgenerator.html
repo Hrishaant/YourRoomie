@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Compliments</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Random Compliments</h1>
+    <div id="compliment-container">
+      <p id="compliment"></p>
+    </div>
+    <button onclick="generateCompliment()">Generate Compliment</button>
+  </div>
+
+  <script>
+    var compliments = [
+      "You have a beautiful smile!",
+      "Your kindness is inspiring.",
+      "You are incredibly talented.",
+      "You make the world a better place.",
+      "You have a heart of gold.",
+      "Your laughter is contagious.",
+      "You are loved and cherished.",
+      "You brighten up my day.",
+      "You are amazing just the way you are.",
+      "You have a fantastic sense of humor."
+    ];
+
+    function generateCompliment() {
+      var randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById("compliment").textContent = randomCompliment;
+    }
+  </script>
+</body>
+</html>
+
